@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:my_todo_app_with_bloc/features/auth/meeting/view/meeting_view.dart';
 import 'package:my_todo_app_with_bloc/features/base/_base/view/base_view.dart';
-import 'package:my_todo_app_with_bloc/features/base/add_task/view/add_task_view.dart';
+import 'package:my_todo_app_with_bloc/features/base/add_todo/view/add_todo_view.dart';
 import 'package:my_todo_app_with_bloc/features/base/home/view/home_view.dart';
-import 'package:my_todo_app_with_bloc/features/base/task/view/task_view.dart';
+import 'package:my_todo_app_with_bloc/features/base/todos/view/todos_view.dart';
 
 class AppRouter {
   static dynamic generateRoute(RouteSettings settings) {
@@ -23,15 +23,15 @@ class AppRouter {
           settings: settings,
           builder: (_) => const BaseView(),
         );
-      case AddTaskView.routeName:
+      case AddTodoView.routeName:
         return MaterialPageRoute(
           settings: settings,
-          builder: (_) => AddTaskView(),
+          builder: (_) => AddTodoView(),
         );
-      case TasksView.routename:
+      case TodosView.routename:
         return MaterialPageRoute(
           settings: settings,
-          builder: (_) => TasksView(),
+          builder: (_) => const TodosView(),
         );
 
       default:

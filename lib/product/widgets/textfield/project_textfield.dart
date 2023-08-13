@@ -5,21 +5,29 @@ class ProjectTextField extends StatelessWidget {
   final String? hintText;
   final Function(String)? onChanged;
   final double height;
+  final String? errorText;
   final TextEditingController? controller;
   const ProjectTextField(
       {Key? key,
       this.hintText,
       this.onChanged,
       this.height = 60,
-      this.controller})
+      this.controller,
+      this.errorText})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: height,
+      height: errorText == null ? height : 85,
       child: TextField(
         decoration: InputDecoration(
+          errorText: errorText,
+          errorStyle: Theme.of(context)
+              .textTheme
+              .headlineMedium!
+              .copyWith(color: Colors.red),
+          errorMaxLines: 2,
           hintText: hintText,
         ),
         onChanged: onChanged,

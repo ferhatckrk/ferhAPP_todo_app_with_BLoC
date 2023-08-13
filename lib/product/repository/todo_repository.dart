@@ -12,6 +12,5 @@ class TodoRepository {
 
   Future deleteTodoById(int id) => todoDao.deleteTodo(id);
 
-  //We are not going to use this in the demo
   Future deleteAllTodos() => todoDao.deleteAllTodos();
 }

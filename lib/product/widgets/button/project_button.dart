@@ -16,7 +16,7 @@ class ProjectButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 50,
-      width: 170,
+      width: double.infinity,
       child: ElevatedButton(
         onPressed: onPressed,
         child: Text(

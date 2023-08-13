@@ -39,7 +39,8 @@ class DatabaseProvider {
         title TEXT,
         description TEXT, 
         isDone INTEGER,
-        date TEXT
+        date TEXT, 
+        time TEXT
       )
     ''');
   }

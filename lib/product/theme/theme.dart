@@ -9,7 +9,57 @@ class ProjectTheme {
         scaffoldBackgroundColor: ProjectColors.white,
         elevatedButtonTheme: _elevatedButtonLight(),
         inputDecorationTheme: _inputDecoration(),
-        appBarTheme: const AppBarTheme(backgroundColor: ProjectColors.purple));
+        appBarTheme: _appBarThemeDataLight(),
+        snackBarTheme: _snackBar(),
+        timePickerTheme: _timePickerLight(),
+        datePickerTheme: _datePickerThemeDataLight());
+  }
+
+  static AppBarTheme _appBarThemeDataLight() {
+    return const AppBarTheme(
+      backgroundColor: ProjectColors.purple,
+    );
+  }
+
+  static DatePickerThemeData _datePickerThemeDataLight() {
+    return DatePickerThemeData(
+        dayStyle: TextStyle(
+            fontSize: 16,
+            fontFamily: GoogleFonts.ubuntu().fontFamily,
+            color: ProjectColors.black));
+  }
+
+  static TimePickerThemeData _timePickerLight() {
+    return TimePickerThemeData(
+        dialHandColor: ProjectColors.purple,
+        hourMinuteTextStyle: TextStyle(
+            fontSize: 17,
+            fontWeight: FontWeight.bold,
+            fontFamily: GoogleFonts.ubuntu().fontFamily,
+            color: ProjectColors.black),
+        dayPeriodTextStyle: TextStyle(
+            fontSize: 17,
+            fontWeight: FontWeight.bold,
+            fontFamily: GoogleFonts.ubuntu().fontFamily,
+            color: ProjectColors.black),
+        helpTextStyle: TextStyle(
+            fontSize: 15,
+            fontWeight: FontWeight.bold,
+            fontFamily: GoogleFonts.ubuntu().fontFamily,
+            color: ProjectColors.black),
+        dialTextStyle: TextStyle(
+            fontSize: 17,
+            fontWeight: FontWeight.bold,
+            fontFamily: GoogleFonts.ubuntu().fontFamily,
+            color: ProjectColors.black));
+  }
+
+  static SnackBarThemeData _snackBar() {
+    return SnackBarThemeData(
+        contentTextStyle: TextStyle(
+            fontSize: 18,
+            fontFamily: GoogleFonts.ubuntu().fontFamily,
+            color: ProjectColors.white));
   }
 
   static InputDecorationTheme _inputDecoration() {

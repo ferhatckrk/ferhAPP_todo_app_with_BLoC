@@ -27,7 +27,7 @@ class _BaseViewState extends State<BaseView> {
             appBar: ProjectAppBar(context: context),
             body: IndexedStack(
               index: state.pageIndex,
-              children: [const HomeView(), const TodosView(), AddTodoView()],
+              children: [HomeView(), const TodosView(), AddTodoView()],
             ),
             bottomNavigationBar: ProjectBottomNavBar());
       },

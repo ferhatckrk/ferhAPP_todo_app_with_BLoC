@@ -56,6 +56,7 @@ class ProjectTheme {
 
   static SnackBarThemeData _snackBar() {
     return SnackBarThemeData(
+        actionTextColor: Colors.white,
         contentTextStyle: TextStyle(
             fontSize: 18,
             fontFamily: GoogleFonts.ubuntu().fontFamily,

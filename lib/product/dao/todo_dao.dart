@@ -1,5 +1,5 @@
-import 'package:my_todo_app_with_bloc/features/todo/model/todo_model.dart';
 import 'package:my_todo_app_with_bloc/product/database/database.dart';
+import 'package:my_todo_app_with_bloc/product/model/todo_model.dart';
 
 class TodoDao {
   final dbProvider = DatabaseProvider.dbProvider;
@@ -17,19 +17,17 @@ class TodoDao {
       {List<String>? columns = const [], required String? query}) async {
     final db = await dbProvider.database;
 
-    List<Map<String, dynamic>>? result;
+    List<Map<String, dynamic>> result = [];
     if (query != null) {
       if (query.isNotEmpty) {
         result = await db.query(todoTABLE,
-            columns: columns,
-            where: 'description LIKE ?',
-            whereArgs: ["%$query%"]);
+            columns: columns, where: 'title LIKE ?', whereArgs: ["%$query%"]);
       }
     } else {
       result = await db.query(todoTABLE, columns: columns);
     }
 
-    List<Todo> todos = result!.isNotEmpty
+    List<Todo> todos = result.isNotEmpty
         ? result.map((item) => Todo.fromJson(item)).toList()
         : [];
     return todos;

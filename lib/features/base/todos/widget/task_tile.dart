@@ -2,9 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import 'package:my_todo_app_with_bloc/features/todo/model/todo_model.dart';
-import 'package:my_todo_app_with_bloc/product/constant/icon_paths.dart';
+ import 'package:my_todo_app_with_bloc/product/constant/icon_paths.dart';
 import 'package:my_todo_app_with_bloc/product/constant/project_colors.dart';
+import 'package:my_todo_app_with_bloc/product/model/todo_model.dart';
 import 'package:my_todo_app_with_bloc/product/utils/project_functions.dart';
 import 'package:my_todo_app_with_bloc/product/widgets/checkbox/project_checkbox.dart';
 import 'package:my_todo_app_with_bloc/product/widgets/text/project_label_text.dart';

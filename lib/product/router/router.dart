@@ -16,7 +16,7 @@ class AppRouter {
       case HomeView.routeName:
         return MaterialPageRoute(
           settings: settings,
-          builder: (_) => const HomeView(),
+          builder: (_) => HomeView(),
         );
       case BaseView.routeName:
         return MaterialPageRoute(

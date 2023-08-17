@@ -1,5 +1,5 @@
-import 'package:my_todo_app_with_bloc/features/todo/model/todo_model.dart';
-import 'package:my_todo_app_with_bloc/product/dao/todo_dao.dart';
+ import 'package:my_todo_app_with_bloc/product/dao/todo_dao.dart';
+import 'package:my_todo_app_with_bloc/product/model/todo_model.dart';
 
 class TodoRepository {
   final todoDao = TodoDao();

@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:my_todo_app_with_bloc/features/todo/model/todo_model.dart';
+ import 'package:my_todo_app_with_bloc/product/model/todo_model.dart';
 import 'package:my_todo_app_with_bloc/product/repository/todo_repository.dart';
 part 'todos_event.dart';
 part 'todos_state.dart';

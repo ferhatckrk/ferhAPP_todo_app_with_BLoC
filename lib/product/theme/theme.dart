@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:my_todo_app_with_bloc/product/constant/project_colors.dart';
+ import 'package:my_todo_app_with_bloc/product/constant/project_colors.dart';
 
 class ProjectTheme {
   static ThemeData get lightTheme {
